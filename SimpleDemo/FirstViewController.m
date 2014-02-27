@@ -34,6 +34,7 @@
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:search, edit, nil];
    
   }
+    
   return self;
 }
 

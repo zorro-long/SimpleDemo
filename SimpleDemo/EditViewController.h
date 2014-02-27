@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditViewController : UIViewController
+@interface EditViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tvEdit;
+@property (strong, nonatomic) NSMutableArray *arrDataSource;
 
 - (IBAction)onCancel:(id)sender;
 - (IBAction)onSave:(id)sender;

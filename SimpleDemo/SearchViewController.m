@@ -20,6 +20,7 @@
     // Custom initialization
     self.title = @"Search";
   }
+    
   return self;
 }
 
@@ -55,11 +56,8 @@
   }
   
   /* Configure the cell. */
-  if ([tableView isEqual:self.searchDisplayController.searchResultsTableView]) {
-    cell.textLabel.text = [self.searchResults objectAtIndex:indexPath.row];
-  }else{
-    cell.textLabel.text = [self.allItems objectAtIndex:indexPath.row];
-  }
+  cell.textLabel.text = [self.searchResults objectAtIndex:indexPath.row];
+
   
   return cell;
 }
@@ -71,7 +69,7 @@
 
 #pragma mark – UISearchDisplayController delegate methods
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-[self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+  [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
 
   return YES;
 }

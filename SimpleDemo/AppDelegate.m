@@ -16,16 +16,19 @@
 {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   // Override point for customization after application launch.
+    
   UIViewController *vc1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
   UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc1];
   UIViewController *vc2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
   UIViewController *vc3 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
   UIViewController *vc4 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
   UIViewController *vc5 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    
   self.tabBarController = [[UITabBarController alloc] init];
   self.tabBarController.viewControllers = @[nav, vc2, vc3, vc4, vc5];
   self.window.rootViewController = self.tabBarController;
   [self.window makeKeyAndVisible];
+    
   return YES;
 }
 
