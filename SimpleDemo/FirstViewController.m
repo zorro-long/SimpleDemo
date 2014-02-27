@@ -16,8 +16,7 @@
 
 @implementation FirstViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     self.title = NSLocalizedString(@"First", @"First");
@@ -29,23 +28,21 @@
     self.navigationItem.leftBarButtonItems = [[NSArray alloc] initWithObjects:refresh, nil];
     
     // init right bar buttons
-    UIBarButtonItem *right1 = [[UIBarButtonItem alloc] initWithTitle:@"right1" style:UIBarButtonItemStyleBordered target:self action:@selector(onRight1)];
-    UIBarButtonItem *right2 = [[UIBarButtonItem alloc] initWithTitle:@"right2" style:UIBarButtonItemStyleBordered target:self action:@selector(onRight2)];
+    UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleBordered target:self action:@selector(onSearch)];
+    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(onEdit)];
     
-    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:right1, right2, nil];
+    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:search, edit, nil];
    
   }
   return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
 }
@@ -56,13 +53,13 @@
   NSLog(@"onRefresh");
 }
 
-- (void)onRight1 {
+- (void)onSearch {
   SearchViewController *searchVC = [[SearchViewController alloc] init];
   
   [self presentViewController:searchVC animated:YES completion:nil];
 }
 
-- (void)onRight2 {
+- (void)onEdit {
   EditViewController *editVC = [[EditViewController alloc] init];
 
   [self presentViewController:editVC animated:YES completion:nil];

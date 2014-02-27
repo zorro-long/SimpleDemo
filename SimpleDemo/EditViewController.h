@@ -10,4 +10,7 @@
 
 @interface EditViewController : UIViewController
 
+- (IBAction)onCancel:(id)sender;
+- (IBAction)onSave:(id)sender;
+
 @end
