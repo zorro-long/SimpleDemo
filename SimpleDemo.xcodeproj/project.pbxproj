@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEA3720618BECFD2009567CB /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA3720418BECFD2009567CB /* FirstViewController.xib */; };
+		AEA3720718BECFD2009567CB /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA3720518BECFD2009567CB /* SecondViewController.xib */; };
 		F4FD79DE18BE16FC00BC67B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FD79DD18BE16FC00BC67B5 /* Foundation.framework */; };
 		F4FD79E018BE16FC00BC67B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FD79DF18BE16FC00BC67B5 /* CoreGraphics.framework */; };
 		F4FD79E218BE16FC00BC67B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FD79E118BE16FC00BC67B5 /* UIKit.framework */; };
 		F4FD79E818BE16FC00BC67B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4FD79E618BE16FC00BC67B5 /* InfoPlist.strings */; };
 		F4FD79EA18BE16FC00BC67B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FD79E918BE16FC00BC67B5 /* main.m */; };
 		F4FD79EE18BE16FC00BC67B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FD79ED18BE16FC00BC67B5 /* AppDelegate.m */; };
-		F4FD79F118BE16FC00BC67B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4FD79EF18BE16FC00BC67B5 /* Main.storyboard */; };
 		F4FD79F418BE16FC00BC67B5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FD79F318BE16FC00BC67B5 /* FirstViewController.m */; };
 		F4FD79F718BE16FC00BC67B5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FD79F618BE16FC00BC67B5 /* SecondViewController.m */; };
 		F4FD79F918BE16FC00BC67B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4FD79F818BE16FC00BC67B5 /* Images.xcassets */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AEA3720418BECFD2009567CB /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		AEA3720518BECFD2009567CB /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		F4FD79DA18BE16FC00BC67B5 /* SimpleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FD79DD18BE16FC00BC67B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F4FD79DF18BE16FC00BC67B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,7 +48,6 @@
 		F4FD79EB18BE16FC00BC67B5 /* SimpleDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleDemo-Prefix.pch"; sourceTree = "<group>"; };
 		F4FD79EC18BE16FC00BC67B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4FD79ED18BE16FC00BC67B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F4FD79F018BE16FC00BC67B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4FD79F218BE16FC00BC67B5 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		F4FD79F318BE16FC00BC67B5 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		F4FD79F518BE16FC00BC67B5 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -115,9 +117,10 @@
 		F4FD79E318BE16FC00BC67B5 /* SimpleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AEA3720418BECFD2009567CB /* FirstViewController.xib */,
+				AEA3720518BECFD2009567CB /* SecondViewController.xib */,
 				F4FD79EC18BE16FC00BC67B5 /* AppDelegate.h */,
 				F4FD79ED18BE16FC00BC67B5 /* AppDelegate.m */,
-				F4FD79EF18BE16FC00BC67B5 /* Main.storyboard */,
 				F4FD79F218BE16FC00BC67B5 /* FirstViewController.h */,
 				F4FD79F318BE16FC00BC67B5 /* FirstViewController.m */,
 				F4FD79F518BE16FC00BC67B5 /* SecondViewController.h */,
@@ -233,9 +236,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA3720718BECFD2009567CB /* SecondViewController.xib in Resources */,
 				F4FD79F918BE16FC00BC67B5 /* Images.xcassets in Resources */,
+				AEA3720618BECFD2009567CB /* FirstViewController.xib in Resources */,
 				F4FD79E818BE16FC00BC67B5 /* InfoPlist.strings in Resources */,
-				F4FD79F118BE16FC00BC67B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,14 +290,6 @@
 				F4FD79E718BE16FC00BC67B5 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F4FD79EF18BE16FC00BC67B5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4FD79F018BE16FC00BC67B5 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		F4FD7A0818BE16FC00BC67B5 /* InfoPlist.strings */ = {
@@ -466,6 +462,7 @@
 				F4FD7A1118BE16FC00BC67B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4FD7A1218BE16FC00BC67B5 /* Build configuration list for PBXNativeTarget "SimpleDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +471,7 @@
 				F4FD7A1418BE16FC00BC67B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
