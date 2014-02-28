@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "DataProvider.h"
 
 @implementation AppDelegate
 
@@ -29,8 +28,6 @@
   self.tabBarController.viewControllers = @[nav, vc2, vc3, vc4, vc5];
   self.window.rootViewController = self.tabBarController;
   [self.window makeKeyAndVisible];
-  
-  [DataProvider getSearchResult];
   
   return YES;
 }

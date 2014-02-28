@@ -9,6 +9,9 @@
 #import "FirstViewController.h"
 #import "EditViewController.h"
 #import "SearchViewController.h"
+#import "ListCell.h"
+#import "ChartViewController.h"
+#import "ChartKViewController.h"
 
 @interface FirstViewController ()
 
@@ -32,7 +35,9 @@
     UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(onEdit)];
     
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:search, edit, nil];
-   
+    
+    // init data source
+    self.arrDatasource = [[NSMutableArray alloc] initWithObjects:@"1", @"2", @"3", nil];
   }
     
   return self;
@@ -64,6 +69,40 @@
   EditViewController *editVC = [[EditViewController alloc] init];
 
   [self presentViewController:editVC animated:YES completion:nil];
+}
+
+#pragma mark - UITableView delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return [self.arrDatasource count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  ListCell *cell = (ListCell *)[tableView dequeueReusableCellWithIdentifier:@"ListCell"];
+  
+  if (cell == nil) {
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ListCell"
+                                                 owner:nil
+                                               options:nil];
+    
+    for (id oneObject in nib) {
+      if ([oneObject isKindOfClass:[ListCell class]]) {
+        cell = (ListCell *)oneObject;
+      }
+    }
+  }
+  
+  return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  UIViewController *chartVC = [[ChartViewController alloc] initWithNibName:@"ChartViewController" bundle:nil];
+  UIViewController *chartKVC = [[ChartKViewController alloc] initWithNibName:@"ChartKViewController" bundle:nil];
+  
+  UITabBarController *tabBarController = [[UITabBarController alloc] init];
+  tabBarController.viewControllers = @[chartVC, chartKVC];
+  
+  [self presentViewController:tabBarController animated:YES completion:nil];
 }
 
 @end

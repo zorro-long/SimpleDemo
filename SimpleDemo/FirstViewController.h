@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tvList;
+@property (nonatomic, strong) NSMutableArray *arrDatasource;
 
 @end
 

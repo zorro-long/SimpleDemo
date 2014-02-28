@@ -13,6 +13,13 @@
 		AEA3720C18BEE6FD009567CB /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA3720A18BEE6FD009567CB /* EditViewController.xib */; };
 		AEA3721018BEE79F009567CB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA3720E18BEE79F009567CB /* SearchViewController.m */; };
 		AEA3721118BEE79F009567CB /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA3720F18BEE79F009567CB /* SearchViewController.xib */; };
+		AEFA616B18C01CA900E2EDB8 /* SortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFA616A18C01CA900E2EDB8 /* SortButton.m */; };
+		AEFA616E18C01DD600E2EDB8 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFA616D18C01DD600E2EDB8 /* ListCell.m */; };
+		AEFA617018C01E1F00E2EDB8 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFA616F18C01E1F00E2EDB8 /* ListCell.xib */; };
+		AEFA617418C022B300E2EDB8 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFA617218C022B300E2EDB8 /* ChartViewController.m */; };
+		AEFA617518C022B300E2EDB8 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFA617318C022B300E2EDB8 /* ChartViewController.xib */; };
+		AEFA617918C0254900E2EDB8 /* ChartKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFA617718C0254900E2EDB8 /* ChartKViewController.m */; };
+		AEFA617A18C0254900E2EDB8 /* ChartKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFA617818C0254900E2EDB8 /* ChartKViewController.xib */; };
 		F4A6DFC818BF71B40015F2E1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DF7718BF71B40015F2E1 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4A6DFC918BF71B40015F2E1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DF7A18BF71B40015F2E1 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4A6DFCA18BF71B40015F2E1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DF7C18BF71B40015F2E1 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -75,6 +82,17 @@
 		AEA3720D18BEE79F009567CB /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		AEA3720E18BEE79F009567CB /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		AEA3720F18BEE79F009567CB /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		AEFA616918C01CA900E2EDB8 /* SortButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortButton.h; sourceTree = "<group>"; };
+		AEFA616A18C01CA900E2EDB8 /* SortButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortButton.m; sourceTree = "<group>"; };
+		AEFA616C18C01DD600E2EDB8 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		AEFA616D18C01DD600E2EDB8 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
+		AEFA616F18C01E1F00E2EDB8 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		AEFA617118C022B300E2EDB8 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		AEFA617218C022B300E2EDB8 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		AEFA617318C022B300E2EDB8 /* ChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartViewController.xib; sourceTree = "<group>"; };
+		AEFA617618C0254900E2EDB8 /* ChartKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartKViewController.h; sourceTree = "<group>"; };
+		AEFA617718C0254900E2EDB8 /* ChartKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartKViewController.m; sourceTree = "<group>"; };
+		AEFA617818C0254900E2EDB8 /* ChartKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartKViewController.xib; sourceTree = "<group>"; };
 		F4A6DF7618BF71B40015F2E1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		F4A6DF7718BF71B40015F2E1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		F4A6DF7818BF71B40015F2E1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -309,6 +327,12 @@
 				AEA3720D18BEE79F009567CB /* SearchViewController.h */,
 				AEA3720E18BEE79F009567CB /* SearchViewController.m */,
 				AEA3720F18BEE79F009567CB /* SearchViewController.xib */,
+				AEFA617118C022B300E2EDB8 /* ChartViewController.h */,
+				AEFA617218C022B300E2EDB8 /* ChartViewController.m */,
+				AEFA617318C022B300E2EDB8 /* ChartViewController.xib */,
+				AEFA617618C0254900E2EDB8 /* ChartKViewController.h */,
+				AEFA617718C0254900E2EDB8 /* ChartKViewController.m */,
+				AEFA617818C0254900E2EDB8 /* ChartKViewController.xib */,
 				F4FD79F518BE16FC00BC67B5 /* SecondViewController.h */,
 				F4FD79F618BE16FC00BC67B5 /* SecondViewController.m */,
 				AEA3720518BECFD2009567CB /* SecondViewController.xib */,
@@ -316,6 +340,11 @@
 				F4FD79E418BE16FC00BC67B5 /* Supporting Files */,
 				F4A6DFED18BF75240015F2E1 /* DataProvider.h */,
 				F4A6DFEE18BF75240015F2E1 /* DataProvider.m */,
+				AEFA616918C01CA900E2EDB8 /* SortButton.h */,
+				AEFA616A18C01CA900E2EDB8 /* SortButton.m */,
+				AEFA616C18C01DD600E2EDB8 /* ListCell.h */,
+				AEFA616D18C01DD600E2EDB8 /* ListCell.m */,
+				AEFA616F18C01E1F00E2EDB8 /* ListCell.xib */,
 			);
 			path = SimpleDemo;
 			sourceTree = "<group>";
@@ -426,11 +455,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEA3720718BECFD2009567CB /* SecondViewController.xib in Resources */,
+				AEFA617A18C0254900E2EDB8 /* ChartKViewController.xib in Resources */,
+				AEFA617518C022B300E2EDB8 /* ChartViewController.xib in Resources */,
 				F4FD79F918BE16FC00BC67B5 /* Images.xcassets in Resources */,
 				AEA3721118BEE79F009567CB /* SearchViewController.xib in Resources */,
 				AEA3720C18BEE6FD009567CB /* EditViewController.xib in Resources */,
 				AEA3720618BECFD2009567CB /* FirstViewController.xib in Resources */,
 				F4FD79E818BE16FC00BC67B5 /* InfoPlist.strings in Resources */,
+				AEFA617018C01E1F00E2EDB8 /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,14 +482,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FD79F718BE16FC00BC67B5 /* SecondViewController.m in Sources */,
+				AEFA617418C022B300E2EDB8 /* ChartViewController.m in Sources */,
 				F4A6DFD518BF71B40015F2E1 /* ASICloudFilesObject.m in Sources */,
 				F4A6DFCE18BF71B40015F2E1 /* ASIInputStream.m in Sources */,
+				AEFA616E18C01DD600E2EDB8 /* ListCell.m in Sources */,
 				F4A6DFF318BF78A20015F2E1 /* Reachability.m in Sources */,
 				F4A6DFDB18BF71B40015F2E1 /* ASIS3ObjectRequest.m in Sources */,
 				F4FD79EE18BE16FC00BC67B5 /* AppDelegate.m in Sources */,
 				F4A6DFCB18BF71B40015F2E1 /* ASIDownloadCache.m in Sources */,
 				F4A6DFC918BF71B40015F2E1 /* ASIDataCompressor.m in Sources */,
 				F4FD79F418BE16FC00BC67B5 /* FirstViewController.m in Sources */,
+				AEFA617918C0254900E2EDB8 /* ChartKViewController.m in Sources */,
 				F4A6DFCD18BF71B40015F2E1 /* ASIHTTPRequest.m in Sources */,
 				F4A6DFD718BF71B40015F2E1 /* ASICloudFilesRequest.m in Sources */,
 				F4FD79EA18BE16FC00BC67B5 /* main.m in Sources */,
@@ -468,6 +503,7 @@
 				AEA3721018BEE79F009567CB /* SearchViewController.m in Sources */,
 				F4A6DFDC18BF71B40015F2E1 /* ASIS3Request.m in Sources */,
 				F4A6DFEF18BF75240015F2E1 /* DataProvider.m in Sources */,
+				AEFA616B18C01CA900E2EDB8 /* SortButton.m in Sources */,
 				F4A6DFCF18BF71B40015F2E1 /* ASINetworkQueue.m in Sources */,
 				F4A6DFD418BF71B40015F2E1 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
 				F4A6DFD318BF71B40015F2E1 /* ASICloudFilesContainerRequest.m in Sources */,
