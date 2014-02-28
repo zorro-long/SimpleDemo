@@ -10,4 +10,11 @@
 
 @interface SortButton : UIButton
 
+@property (nonatomic, assign) BOOL isAscending;
+@property (nonatomic, strong) NSString *sortKey;
+@property (nonatomic, strong) NSString *btnName;
+
+- (void)showSortButton;
+- (void)showNormalButton;
+
 @end

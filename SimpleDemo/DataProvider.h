@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DataProvider : UIResponder
+@interface DataProvider : NSObject
 
 - (void) getSearchResult;
 

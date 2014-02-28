@@ -8,6 +8,10 @@
 
 #import "SortButton.h"
 
+#define ARROW_DOWN      @"↓"
+#define ARROW_UP        @"↑"
+
+
 @implementation SortButton
 
 - (id)initWithFrame:(CGRect)frame {
@@ -18,12 +22,18 @@
   return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-  // Drawing code
+- (void)showSortButton {
+  if (self.isAscending) {
+    self.titleLabel.text = [self.btnName stringByAppendingString:ARROW_UP];
+  } else {
+    self.titleLabel.text = [self.btnName stringByAppendingString:ARROW_DOWN];
+  }
+  
+  self.isAscending = !self.isAscending;
 }
-*/
+
+- (void)showNormalButton {
+  self.titleLabel.text = self.btnName;
+}
 
 @end

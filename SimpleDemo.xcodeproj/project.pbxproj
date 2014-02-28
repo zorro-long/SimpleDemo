@@ -13,6 +13,7 @@
 		AEA3720C18BEE6FD009567CB /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA3720A18BEE6FD009567CB /* EditViewController.xib */; };
 		AEA3721018BEE79F009567CB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA3720E18BEE79F009567CB /* SearchViewController.m */; };
 		AEA3721118BEE79F009567CB /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA3720F18BEE79F009567CB /* SearchViewController.xib */; };
+		AEA7356D18C0735B0050131D /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA7356C18C0735B0050131D /* Stock.m */; };
 		AEFA616B18C01CA900E2EDB8 /* SortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFA616A18C01CA900E2EDB8 /* SortButton.m */; };
 		AEFA616E18C01DD600E2EDB8 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFA616D18C01DD600E2EDB8 /* ListCell.m */; };
 		AEFA617018C01E1F00E2EDB8 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFA616F18C01E1F00E2EDB8 /* ListCell.xib */; };
@@ -20,6 +21,10 @@
 		AEFA617518C022B300E2EDB8 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFA617318C022B300E2EDB8 /* ChartViewController.xib */; };
 		AEFA617918C0254900E2EDB8 /* ChartKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFA617718C0254900E2EDB8 /* ChartKViewController.m */; };
 		AEFA617A18C0254900E2EDB8 /* ChartKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFA617818C0254900E2EDB8 /* ChartKViewController.xib */; };
+		AEFEB23E18C07C22003A6513 /* EditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFEB23D18C07C22003A6513 /* EditCell.m */; };
+		AEFEB24018C07C3B003A6513 /* EditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFEB23F18C07C3B003A6513 /* EditCell.xib */; };
+		AEFEB24318C07CC7003A6513 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFEB24218C07CC7003A6513 /* SearchCell.m */; };
+		AEFEB24518C07CE1003A6513 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFEB24418C07CE1003A6513 /* SearchCell.xib */; };
 		F4A6DFC818BF71B40015F2E1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DF7718BF71B40015F2E1 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4A6DFC918BF71B40015F2E1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DF7A18BF71B40015F2E1 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4A6DFCA18BF71B40015F2E1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DF7C18BF71B40015F2E1 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -82,6 +87,8 @@
 		AEA3720D18BEE79F009567CB /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		AEA3720E18BEE79F009567CB /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		AEA3720F18BEE79F009567CB /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		AEA7356B18C0735B0050131D /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
+		AEA7356C18C0735B0050131D /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
 		AEFA616918C01CA900E2EDB8 /* SortButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortButton.h; sourceTree = "<group>"; };
 		AEFA616A18C01CA900E2EDB8 /* SortButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortButton.m; sourceTree = "<group>"; };
 		AEFA616C18C01DD600E2EDB8 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
@@ -93,6 +100,12 @@
 		AEFA617618C0254900E2EDB8 /* ChartKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartKViewController.h; sourceTree = "<group>"; };
 		AEFA617718C0254900E2EDB8 /* ChartKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartKViewController.m; sourceTree = "<group>"; };
 		AEFA617818C0254900E2EDB8 /* ChartKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartKViewController.xib; sourceTree = "<group>"; };
+		AEFEB23C18C07C22003A6513 /* EditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCell.h; sourceTree = "<group>"; };
+		AEFEB23D18C07C22003A6513 /* EditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCell.m; sourceTree = "<group>"; };
+		AEFEB23F18C07C3B003A6513 /* EditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCell.xib; sourceTree = "<group>"; };
+		AEFEB24118C07CC7003A6513 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
+		AEFEB24218C07CC7003A6513 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		AEFEB24418C07CE1003A6513 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		F4A6DF7618BF71B40015F2E1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		F4A6DF7718BF71B40015F2E1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		F4A6DF7818BF71B40015F2E1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -345,6 +358,14 @@
 				AEFA616C18C01DD600E2EDB8 /* ListCell.h */,
 				AEFA616D18C01DD600E2EDB8 /* ListCell.m */,
 				AEFA616F18C01E1F00E2EDB8 /* ListCell.xib */,
+				AEA7356B18C0735B0050131D /* Stock.h */,
+				AEA7356C18C0735B0050131D /* Stock.m */,
+				AEFEB23C18C07C22003A6513 /* EditCell.h */,
+				AEFEB23D18C07C22003A6513 /* EditCell.m */,
+				AEFEB23F18C07C3B003A6513 /* EditCell.xib */,
+				AEFEB24118C07CC7003A6513 /* SearchCell.h */,
+				AEFEB24218C07CC7003A6513 /* SearchCell.m */,
+				AEFEB24418C07CE1003A6513 /* SearchCell.xib */,
 			);
 			path = SimpleDemo;
 			sourceTree = "<group>";
@@ -457,12 +478,14 @@
 				AEA3720718BECFD2009567CB /* SecondViewController.xib in Resources */,
 				AEFA617A18C0254900E2EDB8 /* ChartKViewController.xib in Resources */,
 				AEFA617518C022B300E2EDB8 /* ChartViewController.xib in Resources */,
+				AEFEB24018C07C3B003A6513 /* EditCell.xib in Resources */,
 				F4FD79F918BE16FC00BC67B5 /* Images.xcassets in Resources */,
 				AEA3721118BEE79F009567CB /* SearchViewController.xib in Resources */,
 				AEA3720C18BEE6FD009567CB /* EditViewController.xib in Resources */,
 				AEA3720618BECFD2009567CB /* FirstViewController.xib in Resources */,
 				F4FD79E818BE16FC00BC67B5 /* InfoPlist.strings in Resources */,
 				AEFA617018C01E1F00E2EDB8 /* ListCell.xib in Resources */,
+				AEFEB24518C07CE1003A6513 /* SearchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +507,7 @@
 				F4FD79F718BE16FC00BC67B5 /* SecondViewController.m in Sources */,
 				AEFA617418C022B300E2EDB8 /* ChartViewController.m in Sources */,
 				F4A6DFD518BF71B40015F2E1 /* ASICloudFilesObject.m in Sources */,
+				AEFEB23E18C07C22003A6513 /* EditCell.m in Sources */,
 				F4A6DFCE18BF71B40015F2E1 /* ASIInputStream.m in Sources */,
 				AEFA616E18C01DD600E2EDB8 /* ListCell.m in Sources */,
 				F4A6DFF318BF78A20015F2E1 /* Reachability.m in Sources */,
@@ -497,9 +521,11 @@
 				F4A6DFD718BF71B40015F2E1 /* ASICloudFilesRequest.m in Sources */,
 				F4FD79EA18BE16FC00BC67B5 /* main.m in Sources */,
 				F4A6DFD118BF71B40015F2E1 /* ASICloudFilesCDNRequest.m in Sources */,
+				AEA7356D18C0735B0050131D /* Stock.m in Sources */,
 				F4A6DFCA18BF71B40015F2E1 /* ASIDataDecompressor.m in Sources */,
 				F4A6DFD618BF71B40015F2E1 /* ASICloudFilesObjectRequest.m in Sources */,
 				F4A6DFDA18BF71B40015F2E1 /* ASIS3BucketRequest.m in Sources */,
+				AEFEB24318C07CC7003A6513 /* SearchCell.m in Sources */,
 				AEA3721018BEE79F009567CB /* SearchViewController.m in Sources */,
 				F4A6DFDC18BF71B40015F2E1 /* ASIS3Request.m in Sources */,
 				F4A6DFEF18BF75240015F2E1 /* DataProvider.m in Sources */,

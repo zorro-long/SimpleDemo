@@ -12,6 +12,7 @@
 #import "ListCell.h"
 #import "ChartViewController.h"
 #import "ChartKViewController.h"
+#import "SortButton.h"
 
 @interface FirstViewController ()
 
@@ -71,6 +72,36 @@
   [self presentViewController:editVC animated:YES completion:nil];
 }
 
+- (IBAction)onNewPrice:(id)sender {
+  [self sortDatasource:self.btnNewPrice.sortKey andIsAscending:self.btnNewPrice.isAscending];
+  
+  [self.btnNewPrice showSortButton];
+  [self.btnLapPercent showNormalButton];
+  [self.btnLap showNormalButton];
+  
+  [self.tvList reloadData];
+}
+
+- (IBAction)onLapPercent:(id)sender {
+  [self sortDatasource:self.btnLapPercent.sortKey andIsAscending:self.btnLapPercent.isAscending];
+  
+  [self.btnNewPrice showNormalButton];
+  [self.btnLapPercent showSortButton];
+  [self.btnLap showNormalButton];
+  
+  [self.tvList reloadData];
+}
+
+- (IBAction)onLap:(id)sender {
+  [self sortDatasource:self.btnLap.sortKey andIsAscending:self.btnLap.isAscending];
+  
+  [self.btnNewPrice showNormalButton];
+  [self.btnLapPercent showNormalButton];
+  [self.btnLap showSortButton];
+  
+  [self.tvList reloadData];
+}
+
 #pragma mark - UITableView delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -103,6 +134,10 @@
   tabBarController.viewControllers = @[chartVC, chartKVC];
   
   [self presentViewController:tabBarController animated:YES completion:nil];
+}
+
+- (void)sortDatasource:(NSString *)key andIsAscending:(BOOL)isAscending {
+  
 }
 
 @end

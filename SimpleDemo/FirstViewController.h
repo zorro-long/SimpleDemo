@@ -8,10 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class SortButton;
+
 @interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tvList;
 @property (nonatomic, strong) NSMutableArray *arrDatasource;
+
+@property (weak, nonatomic) IBOutlet UITableView *tvList;
+@property (weak, nonatomic) IBOutlet SortButton *btnNewPrice;
+@property (weak, nonatomic) IBOutlet SortButton *btnLapPercent;
+@property (weak, nonatomic) IBOutlet SortButton *btnLap;
+
+- (IBAction)onNewPrice:(id)sender;
+- (IBAction)onLapPercent:(id)sender;
+- (IBAction)onLap:(id)sender;
 
 @end
 
