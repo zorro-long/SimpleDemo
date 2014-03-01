@@ -7,8 +7,14 @@
 //
 
 #import "SearchViewController.h"
+#import "SearchCell.h"
+#import "ASIHTTPRequest.h"
+#import "Stock.h"
+#import "AppDefine.h"
 
 @interface SearchViewController ()
+
+@property (nonatomic, strong) UIButton *btnCancelSearch;
 
 @end
 
@@ -19,6 +25,7 @@
   if (self) {
     // Custom initialization
     self.title = @"Search";
+    self.searchResults = [[NSMutableArray alloc] initWithCapacity:0];
   }
     
   return self;
@@ -27,8 +34,9 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
-
-  self.allItems = [[NSMutableArray alloc] initWithObjects:@"111", @"222", @"333", nil];
+  
+  [self.searchDisplayController.searchBar setShowsCancelButton:YES animated:NO];
+  [self.searchDisplayController.searchBar setKeyboardType:UIKeyboardTypeNamePhonePad];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,38 +45,44 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  NSInteger rows = 0;
-  
-  rows = [self.searchResults count];
-  
-  return rows;
+  return [self.searchResults count];
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  static NSString *CellIdentifier = @"cell";
-  
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  SearchCell *cell = (SearchCell *)[tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
   
   if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SearchCell"
+                                                 owner:nil
+                                               options:nil];
+    
+    for (id oneObject in nib) {
+      if ([oneObject isKindOfClass:[SearchCell class]]) {
+        cell = (SearchCell *)oneObject;
+      }
+    }
   }
   
   /* Configure the cell. */
-  cell.textLabel.text = [self.searchResults objectAtIndex:indexPath.row];
-
+  Stock *stock = [self.searchResults objectAtIndex:[indexPath row]];
+  
+  cell.lblName.text = stock.name;
+  cell.lblCode.text = stock.code;
+  cell.lblNickName.text = stock.nickName;
+  cell.queryCode = stock.queryCode;
+  cell.isSelected = [self isSelected:stock.queryCode];
+  [cell showAddRemoveTitle];
   
   return cell;
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-  NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchText];
-  self.searchResults = [self.allItems filteredArrayUsingPredicate:resultPredicate];
+  [self getSearchResultFromUrl:searchText];
 }
 
 #pragma mark – UISearchDisplayController delegate methods
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
   [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
 
   return YES;
@@ -78,6 +92,69 @@
   [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
   
   return YES;
+}
+
+- (void) searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
+  [self.searchDisplayController.searchBar setShowsCancelButton:YES animated:NO];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Actions
+
+- (BOOL)isSelected:(NSString *)stockQueryCode {
+  NSData *customObjectData = [[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_STOCKS];
+  NSMutableDictionary *dicStock = [NSKeyedUnarchiver unarchiveObjectWithData:customObjectData];
+  
+  return ([dicStock objectForKey:stockQueryCode] != nil);
+}
+
+#pragma mark - Get Data
+
+- (void)getSearchResultFromUrl:(NSString *)searchKey {
+  static NSString *searchUrl = @"http://suggest3.sinajs.cn/suggest/key=";
+  
+  [self.searchResults removeAllObjects];
+  
+  NSString *trimmedString = [searchKey stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  
+  if ([trimmedString length] == 0) {
+    return;
+  }
+  
+  NSURL *url = [NSURL URLWithString:[searchUrl stringByAppendingString:trimmedString]];
+  
+  ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+  
+  [request startSynchronous];
+  
+  NSError *error = [request error];
+  
+  if (!error) {
+    NSString *response = [request responseString];
+    
+    NSString* newString =[[response componentsSeparatedByString:@"\""] objectAtIndex:1];
+    
+    NSArray *arrSplit = [newString componentsSeparatedByString:@";"];
+    
+    for (NSString *str in arrSplit) {
+      NSArray *arrStock = [str componentsSeparatedByString:@","];
+      
+      Stock *stock = [[Stock alloc] init];
+      stock.code = [arrStock objectAtIndex:2];
+      stock.queryCode = [arrStock objectAtIndex:3];
+      stock.name = [arrStock objectAtIndex:4];
+      stock.nickName = [arrStock objectAtIndex:5];
+      
+      [self.searchResults addObject:stock];
+    }
+    
+  } else {
+    NSLog(@"Error - %@", error);
+  }
+  
 }
 
 @end

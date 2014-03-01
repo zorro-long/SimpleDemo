@@ -8,13 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Stock : NSObject
+@interface Stock : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *nickName;
 @property (nonatomic, strong) NSString *code;
-@property (nonatomic, strong) NSString *latestPrice;
-@property (nonatomic, strong) NSString *lapPercent;
-@property (nonatomic, strong) NSString *lap;
+@property (nonatomic, strong) NSString *queryCode;
+@property (nonatomic, strong) NSString *currentPrice;
+@property (nonatomic, strong) NSString *yesterdayPrice;
+@property (nonatomic, strong) NSString *highestPrice;
+@property (nonatomic, strong) NSString *lowestPrice;
+//@property (nonatomic, strong) NSMutableArray *arrChartData;
+
+- (NSString *)lap;
+- (NSString *)lapPercent;
 
 @end

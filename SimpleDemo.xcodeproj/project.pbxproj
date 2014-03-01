@@ -106,6 +106,7 @@
 		AEFEB24118C07CC7003A6513 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
 		AEFEB24218C07CC7003A6513 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
 		AEFEB24418C07CE1003A6513 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		F438CA8918C177CE00D56753 /* AppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefine.h; sourceTree = "<group>"; };
 		F4A6DF7618BF71B40015F2E1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		F4A6DF7718BF71B40015F2E1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		F4A6DF7818BF71B40015F2E1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -366,6 +367,7 @@
 				AEFEB24118C07CC7003A6513 /* SearchCell.h */,
 				AEFEB24218C07CC7003A6513 /* SearchCell.m */,
 				AEFEB24418C07CE1003A6513 /* SearchCell.xib */,
+				F438CA8918C177CE00D56753 /* AppDefine.h */,
 			);
 			path = SimpleDemo;
 			sourceTree = "<group>";

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "DataProvider.h"
 
 @implementation AppDelegate
 

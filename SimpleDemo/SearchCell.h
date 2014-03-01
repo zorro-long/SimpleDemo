@@ -10,4 +10,14 @@
 
 @interface SearchCell : UITableViewCell
 
+@property (nonatomic, assign) BOOL isSelected;
+@property (nonatomic, strong) NSString *queryCode;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnAddRemove;
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UILabel *lblCode;
+@property (weak, nonatomic) IBOutlet UILabel *lblNickName;
+
+- (void)showAddRemoveTitle;
+
 @end

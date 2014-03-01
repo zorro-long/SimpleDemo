@@ -54,4 +54,32 @@
   
 }
 
++ (void)getSearchResultFromUrl:(NSString *)searchKey {
+  static NSString *searchUrl = @"http://suggest3.sinajs.cn/suggest/key=";
+  
+  NSString *trimmedString = [searchKey stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+  NSURL *url = [NSURL URLWithString:[searchUrl stringByAppendingString:trimmedString]];
+  
+  ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+  
+  [request startSynchronous];
+  
+  NSError *error = [request error];
+  
+  if (!error) {
+    NSString *response = [request responseString];
+    NSLog(@"Response - %@", response);
+    
+    NSString* newString =[[response componentsSeparatedByString:@"\""] objectAtIndex:1];
+    NSLog(@"newString - %@", newString);
+    
+    //NSArray *arrSplit = [newString componentsSeparatedByString:@","];
+    
+    
+  } else {
+    NSLog(@"Error - %@", error);
+  }
+  
+}
+
 @end

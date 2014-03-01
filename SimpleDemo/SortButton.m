@@ -24,16 +24,16 @@
 
 - (void)showSortButton {
   if (self.isAscending) {
-    self.titleLabel.text = [self.btnName stringByAppendingString:ARROW_UP];
+    [self setTitle:[self.btnName stringByAppendingString:ARROW_UP] forState: UIControlStateNormal];
   } else {
-    self.titleLabel.text = [self.btnName stringByAppendingString:ARROW_DOWN];
+    [self setTitle:[self.btnName stringByAppendingString:ARROW_DOWN] forState: UIControlStateNormal];
   }
   
   self.isAscending = !self.isAscending;
 }
 
 - (void)showNormalButton {
-  self.titleLabel.text = self.btnName;
+  [self setTitle:self.btnName forState: UIControlStateNormal];
 }
 
 @end

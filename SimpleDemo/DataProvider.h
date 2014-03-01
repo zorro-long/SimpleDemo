@@ -11,5 +11,6 @@
 @interface DataProvider : NSObject
 
 - (void) getSearchResult;
++ (void)getSearchResultFromUrl:(NSString *)searchKey;
 
 @end

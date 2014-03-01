@@ -10,7 +10,7 @@
 
 @interface SearchViewController : UIViewController
 
-@property (nonatomic, strong) NSMutableArray *allItems;
-@property (nonatomic, strong) NSArray *searchResults;
+@property (nonatomic, strong) NSMutableArray *searchResults;
+
 
 @end

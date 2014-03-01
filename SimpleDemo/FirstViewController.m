@@ -47,6 +47,9 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  self.btnLap.btnName = self.btnLap.titleLabel.text;
+  self.btnLapPercent.btnName = self.btnLapPercent.titleLabel.text;
+  self.btnNewPrice.btnName = self.btnNewPrice.titleLabel.text;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +60,7 @@
 #pragma mark - Actions
 
 - (void)onRefresh {
+  // TODO: re-get data and reload data.
   NSLog(@"onRefresh");
 }
 
@@ -102,6 +106,10 @@
   [self.tvList reloadData];
 }
 
+- (void)logBtnTitle {
+  NSLog(@"%@ - %@ - %@", self.btnNewPrice.titleLabel.text, self.btnLapPercent.titleLabel.text, self.btnLap.titleLabel.text);
+}
+
 #pragma mark - UITableView delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -127,13 +135,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  UIViewController *chartVC = [[ChartViewController alloc] initWithNibName:@"ChartViewController" bundle:nil];
-  UIViewController *chartKVC = [[ChartKViewController alloc] initWithNibName:@"ChartKViewController" bundle:nil];
+  // TODO: get data from UserDefault and draw the chart.
   
-  UITabBarController *tabBarController = [[UITabBarController alloc] init];
-  tabBarController.viewControllers = @[chartVC, chartKVC];
-  
-  [self presentViewController:tabBarController animated:YES completion:nil];
+//  UIViewController *chartVC = [[ChartViewController alloc] initWithNibName:@"ChartViewController" bundle:nil];
+//  UIViewController *chartKVC = [[ChartKViewController alloc] initWithNibName:@"ChartKViewController" bundle:nil];
+//  
+//  UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//  tabBarController.viewControllers = @[chartVC, chartKVC];
+//  
+//  [self presentViewController:tabBarController animated:YES completion:nil];
 }
 
 - (void)sortDatasource:(NSString *)key andIsAscending:(BOOL)isAscending {
