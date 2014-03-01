@@ -10,4 +10,7 @@
 
 @interface EditCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UILabel *lblCode;
+
 @end

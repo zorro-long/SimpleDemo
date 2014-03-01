@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ListCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UILabel *lblCode;
+@property (weak, nonatomic) IBOutlet UILabel *lblCurrentPrice;
+@property (weak, nonatomic) IBOutlet UILabel *lblLapPercent;
+@property (weak, nonatomic) IBOutlet UILabel *lblLap;
 
 @end

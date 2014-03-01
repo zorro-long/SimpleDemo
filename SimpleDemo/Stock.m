@@ -28,7 +28,21 @@
   
   double lapPercent = [self doubleLap] / yesterdayPrice;
   
-  return [NSString stringWithFormat:@"%.2lf", lapPercent];
+  return [NSString stringWithFormat:@"%.2lf%@", lapPercent, @"%"];
+}
+
+#pragma mark - Compare
+
+- (NSComparisonResult)compareCurrentPrice:(Stock *)otherObject {
+  return [self.currentPrice compare:otherObject.currentPrice];
+}
+
+- (NSComparisonResult)compareLap:(Stock *)otherObject {
+  return [[self lap] compare:[otherObject lap]];
+}
+
+- (NSComparisonResult)compareLapPercent:(Stock *)otherObject {
+  return [[self lapPercent] compare:[otherObject lapPercent]];
 }
 
 #pragma mark - NSCoding support

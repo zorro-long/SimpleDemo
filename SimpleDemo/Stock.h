@@ -18,7 +18,6 @@
 @property (nonatomic, strong) NSString *yesterdayPrice;
 @property (nonatomic, strong) NSString *highestPrice;
 @property (nonatomic, strong) NSString *lowestPrice;
-//@property (nonatomic, strong) NSMutableArray *arrChartData;
 
 - (NSString *)lap;
 - (NSString *)lapPercent;

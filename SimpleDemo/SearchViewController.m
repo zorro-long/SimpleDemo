@@ -106,9 +106,12 @@
 
 - (BOOL)isSelected:(NSString *)stockQueryCode {
   NSData *customObjectData = [[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_STOCKS];
-  NSMutableDictionary *dicStock = [NSKeyedUnarchiver unarchiveObjectWithData:customObjectData];
+  NSMutableArray *arrStock = [NSKeyedUnarchiver unarchiveObjectWithData:customObjectData];
   
-  return ([dicStock objectForKey:stockQueryCode] != nil);
+  NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF.queryCode == %@", stockQueryCode];
+  NSArray* subArray = [arrStock filteredArrayUsingPredicate:predicate];
+  
+  return (subArray != nil && [subArray count] > 0);
 }
 
 #pragma mark - Get Data

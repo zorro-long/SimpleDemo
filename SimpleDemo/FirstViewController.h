@@ -13,6 +13,8 @@
 @interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *arrDatasource;
+@property (nonatomic, strong) NSTimer *refreshDatasourceTimer;
+@property (nonatomic, strong) NSTimer *refreshTableTimer;
 
 @property (weak, nonatomic) IBOutlet UITableView *tvList;
 @property (weak, nonatomic) IBOutlet SortButton *btnNewPrice;

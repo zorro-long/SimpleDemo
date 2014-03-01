@@ -7,6 +7,9 @@
 //
 
 #import "EditViewController.h"
+#import "AppDefine.h"
+#import "Stock.h"
+#import "EditCell.h"
 
 @interface EditViewController ()
 
@@ -19,7 +22,15 @@
   if (self) {
     // Custom initialization
     self.title = @"Edit";
-    self.arrDataSource = [[NSMutableArray alloc] initWithObjects:@"111", @"222", @"333", nil];
+
+    self.arrDataSource = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    NSData *customObjectData = [[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_STOCKS];
+    NSMutableArray *arrStock = [NSKeyedUnarchiver unarchiveObjectWithData:customObjectData];
+    
+    if (arrStock != nil && [arrStock count] != 0) {
+      self.arrDataSource = arrStock;
+    }
   }
     
   return self;
@@ -45,6 +56,9 @@
 }
 
 - (IBAction)onSave:(id)sender {
+  NSData *newObjectData = [NSKeyedArchiver archivedDataWithRootObject:self.arrDataSource];
+  [[NSUserDefaults standardUserDefaults] setObject:newObjectData forKey:UD_KEY_STOCKS];
+  
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -58,17 +72,25 @@
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  static NSString *CellIdentifier = @"cell";
-  
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  EditCell *cell = (EditCell *)[tableView dequeueReusableCellWithIdentifier:@"EditCell"];
   
   if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    cell.accessoryType = UITableViewCellAccessoryNone;
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EditCell"
+                                                 owner:nil
+                                               options:nil];
+    
+    for (id oneObject in nib) {
+      if ([oneObject isKindOfClass:[EditCell class]]) {
+        cell = (EditCell *)oneObject;
+      }
+    }
   }
   
   /* Configure the cell. */
-  cell.textLabel.text = [self.arrDataSource objectAtIndex:indexPath.row];
+  Stock *stock = [self.arrDataSource objectAtIndex:[indexPath row]];
+  
+  cell.lblName.text = stock.name;
+  cell.lblCode.text = stock.code;
   
   return cell;
 }
@@ -93,6 +115,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+  Stock *oldStock = [self.arrDataSource objectAtIndex:sourceIndexPath.row];
+  [self.arrDataSource removeObject: oldStock];
+  [self.arrDataSource insertObject:oldStock atIndex:destinationIndexPath.row];
   
 }
 

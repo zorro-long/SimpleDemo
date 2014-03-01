@@ -35,13 +35,16 @@
   [self showAddRemoveTitle];
   
   NSData *customObjectData = [[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_STOCKS];
-  NSMutableDictionary *dicStock = [NSKeyedUnarchiver unarchiveObjectWithData:customObjectData];
-  if (dicStock == nil) {
-    dicStock = [[NSMutableDictionary alloc] initWithCapacity:0];
+  NSMutableArray *arrStock = [NSKeyedUnarchiver unarchiveObjectWithData:customObjectData];
+  if (arrStock == nil || [arrStock count] == 0) {
+    arrStock = [[NSMutableArray alloc] initWithCapacity:0];
   }
   
-  if ([dicStock objectForKey:self.queryCode] != nil) {
-    [dicStock removeObjectForKey:self.queryCode];
+  NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF.queryCode == %@", self.queryCode];
+  NSArray* subArray = [arrStock filteredArrayUsingPredicate:predicate];
+  
+  if (subArray != nil && [subArray count] > 0) {
+    [arrStock removeObject:[subArray objectAtIndex:0]];
   } else {
     Stock *stock = [[Stock alloc] init];
     stock.name = self.lblName.text;
@@ -49,10 +52,10 @@
     stock.code = self.lblCode.text;
     stock.queryCode = self.queryCode;
     
-    [dicStock setObject:stock forKey:stock.queryCode];
+    [arrStock addObject:stock];
   }
   
-  NSData *newObjectData = [NSKeyedArchiver archivedDataWithRootObject:dicStock];
+  NSData *newObjectData = [NSKeyedArchiver archivedDataWithRootObject:arrStock];
   [[NSUserDefaults standardUserDefaults] setObject:newObjectData forKey:UD_KEY_STOCKS];
 }
 
