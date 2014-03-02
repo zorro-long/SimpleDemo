@@ -21,7 +21,6 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     // Custom initialization
-    self.title = @"Edit";
 
     self.arrDataSource = [[NSMutableArray alloc] initWithCapacity:0];
     
@@ -43,6 +42,7 @@
   if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
     self.edgesForExtendedLayout = UIRectEdgeNone;
   }
+  
   [self.tvEdit setEditing:YES animated:YES];
 }
 
@@ -68,16 +68,11 @@
   return [self.arrDataSource count];
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   EditCell *cell = (EditCell *)[tableView dequeueReusableCellWithIdentifier:@"EditCell"];
   
   if (cell == nil) {
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EditCell"
-                                                 owner:nil
-                                               options:nil];
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EditCell" owner:nil options:nil];
     
     for (id oneObject in nib) {
       if ([oneObject isKindOfClass:[EditCell class]]) {

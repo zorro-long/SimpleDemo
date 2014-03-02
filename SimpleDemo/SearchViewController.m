@@ -53,9 +53,7 @@
   SearchCell *cell = (SearchCell *)[tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
   
   if (cell == nil) {
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SearchCell"
-                                                 owner:nil
-                                               options:nil];
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SearchCell" owner:nil options:nil];
     
     for (id oneObject in nib) {
       if ([oneObject isKindOfClass:[SearchCell class]]) {
@@ -82,6 +80,7 @@
 }
 
 #pragma mark – UISearchDisplayController delegate methods
+
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
   [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
 
@@ -157,7 +156,6 @@
   } else {
     NSLog(@"Error - %@", error);
   }
-  
 }
 
 @end

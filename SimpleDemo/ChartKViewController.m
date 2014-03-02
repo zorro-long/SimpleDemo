@@ -37,7 +37,7 @@
   // Do any additional setup after loading the view from its nib.
   
   //candleChart
-  self.candleChart = [[Chart alloc] initWithFrame:CGRectMake(0, 5, self.view.frame.size.width, self.view.frame.size.height - 140)];
+  self.candleChart = [[Chart alloc] initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height - 200)];
 	[self.view addSubview:self.candleChart];
   
   //init chart
@@ -49,9 +49,8 @@
 -(void)initChart{
 	NSMutableArray *padding = [NSMutableArray arrayWithObjects:@"5",@"5",@"5",@"5",nil];
 	[self.candleChart setPadding:padding];
-	NSMutableArray *secs = [[NSMutableArray alloc] init];
-	[secs addObject:@"1"];
-  [secs addObject:@"1"];
+  
+	NSMutableArray *secs = [[NSMutableArray alloc] initWithObjects:@"1", @"1", nil];
   
 	[self.candleChart addSections:2 withRatios:secs];
   
@@ -204,7 +203,7 @@
   NSMutableArray *vol = [[NSMutableArray alloc] init];
   for(int i = 0;i < data.count;i++){
     NSMutableArray *item = [[NSMutableArray alloc] init];
-    [item addObject:[@"" stringByAppendingFormat:@"%f",[[[data objectAtIndex:i] objectAtIndex:0] floatValue]/100]];
+    [item addObject:[@"" stringByAppendingFormat:@"%f",[[[data objectAtIndex:i] objectAtIndex:4] floatValue]/100]];
     [vol addObject:item];
     
   }
@@ -212,4 +211,7 @@
   
 }
 
+- (IBAction)onBack:(id)sender {
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

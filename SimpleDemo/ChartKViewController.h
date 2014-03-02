@@ -16,4 +16,6 @@
 @property (nonatomic, assign) int chartMode;
 @property (nonatomic, strong) NSString *queryCode;
 
+- (IBAction)onBack:(id)sender;
+
 @end
