@@ -184,15 +184,15 @@ static NSString *searchUrl = @"http://hq.sinajs.cn/list=";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  // TODO: get data from UserDefault and draw the chart.
+  ChartViewController *chartVC = [[ChartViewController alloc] initWithNibName:@"ChartViewController" bundle:nil];
+  chartVC.queryCode = [[self.arrDatasource objectAtIndex:indexPath.row] queryCode];
+  ChartKViewController *chartKVC = [[ChartKViewController alloc] initWithNibName:@"ChartKViewController" bundle:nil];
+  chartKVC.queryCode = [[self.arrDatasource objectAtIndex:indexPath.row] queryCode];
   
-//  UIViewController *chartVC = [[ChartViewController alloc] initWithNibName:@"ChartViewController" bundle:nil];
-//  UIViewController *chartKVC = [[ChartKViewController alloc] initWithNibName:@"ChartKViewController" bundle:nil];
-//  
-//  UITabBarController *tabBarController = [[UITabBarController alloc] init];
-//  tabBarController.viewControllers = @[chartVC, chartKVC];
-//  
-//  [self presentViewController:tabBarController animated:YES completion:nil];
+  UITabBarController *tabBarController = [[UITabBarController alloc] init];
+  tabBarController.viewControllers = @[chartVC, chartKVC];
+  
+  [self presentViewController:tabBarController animated:YES completion:nil];
 }
 
 - (void)sortDatasource:(NSString *)key andIsAscending:(BOOL)isAscending {

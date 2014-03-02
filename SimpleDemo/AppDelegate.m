@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "DataProvider.h"
 #import "AppDefine.h"
 
 @implementation AppDelegate

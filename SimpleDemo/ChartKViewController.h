@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class Chart;
+
 @interface ChartKViewController : UIViewController
+
+@property (nonatomic, strong) Chart *candleChart;
+@property (nonatomic, assign) int chartMode;
+@property (nonatomic, strong) NSString *queryCode;
 
 @end

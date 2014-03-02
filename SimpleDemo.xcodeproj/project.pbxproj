@@ -25,6 +25,19 @@
 		AEFEB24018C07C3B003A6513 /* EditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFEB23F18C07C3B003A6513 /* EditCell.xib */; };
 		AEFEB24318C07CC7003A6513 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFEB24218C07CC7003A6513 /* SearchCell.m */; };
 		AEFEB24518C07CE1003A6513 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFEB24418C07CE1003A6513 /* SearchCell.xib */; };
+		F438CA8B18C2195600D56753 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F438CA8A18C2195600D56753 /* CFNetwork.framework */; };
+		F438CA8D18C2196300D56753 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F438CA8C18C2196300D56753 /* QuartzCore.framework */; };
+		F438CA9F18C21BF800D56753 /* AreaChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CA9018C21BF800D56753 /* AreaChartModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F438CAA018C21BF800D56753 /* CandleChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CA9218C21BF800D56753 /* CandleChartModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F438CAA118C21BF800D56753 /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CA9418C21BF800D56753 /* Chart.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F438CAA218C21BF800D56753 /* ChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CA9618C21BF800D56753 /* ChartModel.m */; };
+		F438CAA318C21BF800D56753 /* ColumnChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CA9818C21BF800D56753 /* ColumnChartModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F438CAA418C21BF800D56753 /* LineChartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CA9A18C21BF800D56753 /* LineChartModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F438CAA518C21BF800D56753 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CA9C18C21BF800D56753 /* Section.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F438CAA618C21BF800D56753 /* YAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CA9E18C21BF800D56753 /* YAxis.m */; };
+		F438CAA918C2218200D56753 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CAA818C2218200D56753 /* NSString+Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F438CAAC18C2219600D56753 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F438CAAB18C2219600D56753 /* NSDate+Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F438CAB118C22A4400D56753 /* indicators.json in Resources */ = {isa = PBXBuildFile; fileRef = F438CAB018C22A4400D56753 /* indicators.json */; };
 		F4A6DFC818BF71B40015F2E1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DF7718BF71B40015F2E1 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4A6DFC918BF71B40015F2E1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DF7A18BF71B40015F2E1 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4A6DFCA18BF71B40015F2E1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DF7C18BF71B40015F2E1 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -46,7 +59,6 @@
 		F4A6DFDB18BF71B40015F2E1 /* ASIS3ObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DFA518BF71B40015F2E1 /* ASIS3ObjectRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4A6DFDC18BF71B40015F2E1 /* ASIS3Request.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DFA718BF71B40015F2E1 /* ASIS3Request.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4A6DFDD18BF71B40015F2E1 /* ASIS3ServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DFA918BF71B40015F2E1 /* ASIS3ServiceRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F4A6DFEF18BF75240015F2E1 /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DFEE18BF75240015F2E1 /* DataProvider.m */; };
 		F4A6DFF318BF78A20015F2E1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A6DFF218BF78A20015F2E1 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4A6DFF518BF78D10015F2E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A6DFF418BF78D10015F2E1 /* SystemConfiguration.framework */; };
 		F4A6DFF718BF78E10015F2E1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A6DFF618BF78E10015F2E1 /* MobileCoreServices.framework */; };
@@ -107,6 +119,29 @@
 		AEFEB24218C07CC7003A6513 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
 		AEFEB24418C07CE1003A6513 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		F438CA8918C177CE00D56753 /* AppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefine.h; sourceTree = "<group>"; };
+		F438CA8A18C2195600D56753 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F438CA8C18C2196300D56753 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F438CA8F18C21BF800D56753 /* AreaChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaChartModel.h; sourceTree = "<group>"; };
+		F438CA9018C21BF800D56753 /* AreaChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaChartModel.m; sourceTree = "<group>"; };
+		F438CA9118C21BF800D56753 /* CandleChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandleChartModel.h; sourceTree = "<group>"; };
+		F438CA9218C21BF800D56753 /* CandleChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandleChartModel.m; sourceTree = "<group>"; };
+		F438CA9318C21BF800D56753 /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart.h; sourceTree = "<group>"; };
+		F438CA9418C21BF800D56753 /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart.m; sourceTree = "<group>"; };
+		F438CA9518C21BF800D56753 /* ChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartModel.h; sourceTree = "<group>"; };
+		F438CA9618C21BF800D56753 /* ChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartModel.m; sourceTree = "<group>"; };
+		F438CA9718C21BF800D56753 /* ColumnChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnChartModel.h; sourceTree = "<group>"; };
+		F438CA9818C21BF800D56753 /* ColumnChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnChartModel.m; sourceTree = "<group>"; };
+		F438CA9918C21BF800D56753 /* LineChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChartModel.h; sourceTree = "<group>"; };
+		F438CA9A18C21BF800D56753 /* LineChartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartModel.m; sourceTree = "<group>"; };
+		F438CA9B18C21BF800D56753 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
+		F438CA9C18C21BF800D56753 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		F438CA9D18C21BF800D56753 /* YAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAxis.h; sourceTree = "<group>"; };
+		F438CA9E18C21BF800D56753 /* YAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAxis.m; sourceTree = "<group>"; };
+		F438CAA718C2218200D56753 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		F438CAA818C2218200D56753 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		F438CAAA18C2219600D56753 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		F438CAAB18C2219600D56753 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		F438CAB018C22A4400D56753 /* indicators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = indicators.json; sourceTree = "<group>"; };
 		F4A6DF7618BF71B40015F2E1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		F4A6DF7718BF71B40015F2E1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		F4A6DF7818BF71B40015F2E1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -154,8 +189,6 @@
 		F4A6DFA718BF71B40015F2E1 /* ASIS3Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3Request.m; sourceTree = "<group>"; };
 		F4A6DFA818BF71B40015F2E1 /* ASIS3ServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIS3ServiceRequest.h; sourceTree = "<group>"; };
 		F4A6DFA918BF71B40015F2E1 /* ASIS3ServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIS3ServiceRequest.m; sourceTree = "<group>"; };
-		F4A6DFED18BF75240015F2E1 /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
-		F4A6DFEE18BF75240015F2E1 /* DataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataProvider.m; sourceTree = "<group>"; };
 		F4A6DFF118BF78A20015F2E1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F4A6DFF218BF78A20015F2E1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F4A6DFF418BF78D10015F2E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -189,6 +222,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F438CA8D18C2196300D56753 /* QuartzCore.framework in Frameworks */,
+				F438CA8B18C2195600D56753 /* CFNetwork.framework in Frameworks */,
 				F4A6DFFB18BF7A0F0015F2E1 /* libxml2.2.dylib in Frameworks */,
 				F4A6DFF918BF78F40015F2E1 /* libz.1.2.5.dylib in Frameworks */,
 				F4A6DFF718BF78E10015F2E1 /* MobileCoreServices.framework in Frameworks */,
@@ -212,6 +247,112 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F423673A18C2AE60009BE20D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F438CAA718C2218200D56753 /* NSString+Helper.h */,
+				F438CAA818C2218200D56753 /* NSString+Helper.m */,
+				F438CAAA18C2219600D56753 /* NSDate+Helper.h */,
+				F438CAAB18C2219600D56753 /* NSDate+Helper.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		F423673B18C2AEBA009BE20D /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				F4FD79F218BE16FC00BC67B5 /* FirstViewController.h */,
+				F4FD79F318BE16FC00BC67B5 /* FirstViewController.m */,
+				AEA3720418BECFD2009567CB /* FirstViewController.xib */,
+				AEFA616C18C01DD600E2EDB8 /* ListCell.h */,
+				AEFA616D18C01DD600E2EDB8 /* ListCell.m */,
+				AEFA616F18C01E1F00E2EDB8 /* ListCell.xib */,
+				AEFA616918C01CA900E2EDB8 /* SortButton.h */,
+				AEFA616A18C01CA900E2EDB8 /* SortButton.m */,
+			);
+			name = ListView;
+			sourceTree = "<group>";
+		};
+		F423673C18C2AEC9009BE20D /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				AEA3720818BEE6FD009567CB /* EditViewController.h */,
+				AEA3720918BEE6FD009567CB /* EditViewController.m */,
+				AEA3720A18BEE6FD009567CB /* EditViewController.xib */,
+				AEFEB23C18C07C22003A6513 /* EditCell.h */,
+				AEFEB23D18C07C22003A6513 /* EditCell.m */,
+				AEFEB23F18C07C3B003A6513 /* EditCell.xib */,
+			);
+			name = EditView;
+			sourceTree = "<group>";
+		};
+		F423673D18C2AED3009BE20D /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				AEA3720D18BEE79F009567CB /* SearchViewController.h */,
+				AEA3720E18BEE79F009567CB /* SearchViewController.m */,
+				AEA3720F18BEE79F009567CB /* SearchViewController.xib */,
+				AEFEB24118C07CC7003A6513 /* SearchCell.h */,
+				AEFEB24218C07CC7003A6513 /* SearchCell.m */,
+				AEFEB24418C07CE1003A6513 /* SearchCell.xib */,
+			);
+			name = SearchView;
+			sourceTree = "<group>";
+		};
+		F423673E18C2AEE2009BE20D /* ChartTimeView */ = {
+			isa = PBXGroup;
+			children = (
+				AEFA617118C022B300E2EDB8 /* ChartViewController.h */,
+				AEFA617218C022B300E2EDB8 /* ChartViewController.m */,
+				AEFA617318C022B300E2EDB8 /* ChartViewController.xib */,
+			);
+			name = ChartTimeView;
+			sourceTree = "<group>";
+		};
+		F423673F18C2AEED009BE20D /* ChartKView */ = {
+			isa = PBXGroup;
+			children = (
+				AEFA617618C0254900E2EDB8 /* ChartKViewController.h */,
+				AEFA617718C0254900E2EDB8 /* ChartKViewController.m */,
+				AEFA617818C0254900E2EDB8 /* ChartKViewController.xib */,
+			);
+			name = ChartKView;
+			sourceTree = "<group>";
+		};
+		F423674018C2AEF9009BE20D /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				F4FD79F518BE16FC00BC67B5 /* SecondViewController.h */,
+				F4FD79F618BE16FC00BC67B5 /* SecondViewController.m */,
+				AEA3720518BECFD2009567CB /* SecondViewController.xib */,
+			);
+			name = EmptyView;
+			sourceTree = "<group>";
+		};
+		F438CA8E18C21BF800D56753 /* chartee */ = {
+			isa = PBXGroup;
+			children = (
+				F438CAB018C22A4400D56753 /* indicators.json */,
+				F438CA8F18C21BF800D56753 /* AreaChartModel.h */,
+				F438CA9018C21BF800D56753 /* AreaChartModel.m */,
+				F438CA9118C21BF800D56753 /* CandleChartModel.h */,
+				F438CA9218C21BF800D56753 /* CandleChartModel.m */,
+				F438CA9318C21BF800D56753 /* Chart.h */,
+				F438CA9418C21BF800D56753 /* Chart.m */,
+				F438CA9518C21BF800D56753 /* ChartModel.h */,
+				F438CA9618C21BF800D56753 /* ChartModel.m */,
+				F438CA9718C21BF800D56753 /* ColumnChartModel.h */,
+				F438CA9818C21BF800D56753 /* ColumnChartModel.m */,
+				F438CA9918C21BF800D56753 /* LineChartModel.h */,
+				F438CA9A18C21BF800D56753 /* LineChartModel.m */,
+				F438CA9B18C21BF800D56753 /* Section.h */,
+				F438CA9C18C21BF800D56753 /* Section.m */,
+				F438CA9D18C21BF800D56753 /* YAxis.h */,
+				F438CA9E18C21BF800D56753 /* YAxis.m */,
+			);
+			path = chartee;
+			sourceTree = "<group>";
+		};
 		F4A6DF7518BF71B40015F2E1 /* ASIHttpRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +455,8 @@
 		F4FD79DC18BE16FC00BC67B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F438CA8C18C2196300D56753 /* QuartzCore.framework */,
+				F438CA8A18C2195600D56753 /* CFNetwork.framework */,
 				F4A6DFFA18BF7A0F0015F2E1 /* libxml2.2.dylib */,
 				F4A6DFF818BF78F40015F2E1 /* libz.1.2.5.dylib */,
 				F4A6DFF618BF78E10015F2E1 /* MobileCoreServices.framework */,
@@ -329,45 +472,22 @@
 		F4FD79E318BE16FC00BC67B5 /* SimpleDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F4A6DF7518BF71B40015F2E1 /* ASIHttpRequest */,
 				F4FD79EC18BE16FC00BC67B5 /* AppDelegate.h */,
 				F4FD79ED18BE16FC00BC67B5 /* AppDelegate.m */,
-				F4FD79F218BE16FC00BC67B5 /* FirstViewController.h */,
-				F4FD79F318BE16FC00BC67B5 /* FirstViewController.m */,
-				AEA3720418BECFD2009567CB /* FirstViewController.xib */,
-				AEA3720818BEE6FD009567CB /* EditViewController.h */,
-				AEA3720918BEE6FD009567CB /* EditViewController.m */,
-				AEA3720A18BEE6FD009567CB /* EditViewController.xib */,
-				AEA3720D18BEE79F009567CB /* SearchViewController.h */,
-				AEA3720E18BEE79F009567CB /* SearchViewController.m */,
-				AEA3720F18BEE79F009567CB /* SearchViewController.xib */,
-				AEFA617118C022B300E2EDB8 /* ChartViewController.h */,
-				AEFA617218C022B300E2EDB8 /* ChartViewController.m */,
-				AEFA617318C022B300E2EDB8 /* ChartViewController.xib */,
-				AEFA617618C0254900E2EDB8 /* ChartKViewController.h */,
-				AEFA617718C0254900E2EDB8 /* ChartKViewController.m */,
-				AEFA617818C0254900E2EDB8 /* ChartKViewController.xib */,
-				F4FD79F518BE16FC00BC67B5 /* SecondViewController.h */,
-				F4FD79F618BE16FC00BC67B5 /* SecondViewController.m */,
-				AEA3720518BECFD2009567CB /* SecondViewController.xib */,
-				F4FD79F818BE16FC00BC67B5 /* Images.xcassets */,
-				F4FD79E418BE16FC00BC67B5 /* Supporting Files */,
-				F4A6DFED18BF75240015F2E1 /* DataProvider.h */,
-				F4A6DFEE18BF75240015F2E1 /* DataProvider.m */,
-				AEFA616918C01CA900E2EDB8 /* SortButton.h */,
-				AEFA616A18C01CA900E2EDB8 /* SortButton.m */,
-				AEFA616C18C01DD600E2EDB8 /* ListCell.h */,
-				AEFA616D18C01DD600E2EDB8 /* ListCell.m */,
-				AEFA616F18C01E1F00E2EDB8 /* ListCell.xib */,
+				F438CA8918C177CE00D56753 /* AppDefine.h */,
 				AEA7356B18C0735B0050131D /* Stock.h */,
 				AEA7356C18C0735B0050131D /* Stock.m */,
-				AEFEB23C18C07C22003A6513 /* EditCell.h */,
-				AEFEB23D18C07C22003A6513 /* EditCell.m */,
-				AEFEB23F18C07C3B003A6513 /* EditCell.xib */,
-				AEFEB24118C07CC7003A6513 /* SearchCell.h */,
-				AEFEB24218C07CC7003A6513 /* SearchCell.m */,
-				AEFEB24418C07CE1003A6513 /* SearchCell.xib */,
-				F438CA8918C177CE00D56753 /* AppDefine.h */,
+				F423673B18C2AEBA009BE20D /* ListView */,
+				F423673C18C2AEC9009BE20D /* EditView */,
+				F423673D18C2AED3009BE20D /* SearchView */,
+				F423673E18C2AEE2009BE20D /* ChartTimeView */,
+				F423673F18C2AEED009BE20D /* ChartKView */,
+				F423674018C2AEF9009BE20D /* EmptyView */,
+				F423673A18C2AE60009BE20D /* Category */,
+				F438CA8E18C21BF800D56753 /* chartee */,
+				F4A6DF7518BF71B40015F2E1 /* ASIHttpRequest */,
+				F4FD79E418BE16FC00BC67B5 /* Supporting Files */,
+				F4FD79F818BE16FC00BC67B5 /* Images.xcassets */,
 			);
 			path = SimpleDemo;
 			sourceTree = "<group>";
@@ -488,6 +608,7 @@
 				F4FD79E818BE16FC00BC67B5 /* InfoPlist.strings in Resources */,
 				AEFA617018C01E1F00E2EDB8 /* ListCell.xib in Resources */,
 				AEFEB24518C07CE1003A6513 /* SearchCell.xib in Resources */,
+				F438CAB118C22A4400D56753 /* indicators.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,29 +629,38 @@
 			files = (
 				F4FD79F718BE16FC00BC67B5 /* SecondViewController.m in Sources */,
 				AEFA617418C022B300E2EDB8 /* ChartViewController.m in Sources */,
+				F438CA9F18C21BF800D56753 /* AreaChartModel.m in Sources */,
 				F4A6DFD518BF71B40015F2E1 /* ASICloudFilesObject.m in Sources */,
 				AEFEB23E18C07C22003A6513 /* EditCell.m in Sources */,
 				F4A6DFCE18BF71B40015F2E1 /* ASIInputStream.m in Sources */,
 				AEFA616E18C01DD600E2EDB8 /* ListCell.m in Sources */,
 				F4A6DFF318BF78A20015F2E1 /* Reachability.m in Sources */,
+				F438CAA618C21BF800D56753 /* YAxis.m in Sources */,
+				F438CAA318C21BF800D56753 /* ColumnChartModel.m in Sources */,
 				F4A6DFDB18BF71B40015F2E1 /* ASIS3ObjectRequest.m in Sources */,
 				F4FD79EE18BE16FC00BC67B5 /* AppDelegate.m in Sources */,
 				F4A6DFCB18BF71B40015F2E1 /* ASIDownloadCache.m in Sources */,
 				F4A6DFC918BF71B40015F2E1 /* ASIDataCompressor.m in Sources */,
+				F438CAAC18C2219600D56753 /* NSDate+Helper.m in Sources */,
+				F438CAA118C21BF800D56753 /* Chart.m in Sources */,
 				F4FD79F418BE16FC00BC67B5 /* FirstViewController.m in Sources */,
 				AEFA617918C0254900E2EDB8 /* ChartKViewController.m in Sources */,
 				F4A6DFCD18BF71B40015F2E1 /* ASIHTTPRequest.m in Sources */,
+				F438CAA518C21BF800D56753 /* Section.m in Sources */,
 				F4A6DFD718BF71B40015F2E1 /* ASICloudFilesRequest.m in Sources */,
+				F438CAA918C2218200D56753 /* NSString+Helper.m in Sources */,
 				F4FD79EA18BE16FC00BC67B5 /* main.m in Sources */,
 				F4A6DFD118BF71B40015F2E1 /* ASICloudFilesCDNRequest.m in Sources */,
 				AEA7356D18C0735B0050131D /* Stock.m in Sources */,
 				F4A6DFCA18BF71B40015F2E1 /* ASIDataDecompressor.m in Sources */,
 				F4A6DFD618BF71B40015F2E1 /* ASICloudFilesObjectRequest.m in Sources */,
 				F4A6DFDA18BF71B40015F2E1 /* ASIS3BucketRequest.m in Sources */,
+				F438CAA418C21BF800D56753 /* LineChartModel.m in Sources */,
 				AEFEB24318C07CC7003A6513 /* SearchCell.m in Sources */,
+				F438CAA018C21BF800D56753 /* CandleChartModel.m in Sources */,
 				AEA3721018BEE79F009567CB /* SearchViewController.m in Sources */,
+				F438CAA218C21BF800D56753 /* ChartModel.m in Sources */,
 				F4A6DFDC18BF71B40015F2E1 /* ASIS3Request.m in Sources */,
-				F4A6DFEF18BF75240015F2E1 /* DataProvider.m in Sources */,
 				AEFA616B18C01CA900E2EDB8 /* SortButton.m in Sources */,
 				F4A6DFCF18BF71B40015F2E1 /* ASINetworkQueue.m in Sources */,
 				F4A6DFD418BF71B40015F2E1 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
